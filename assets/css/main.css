@@ -3907,3 +3907,49 @@ input, select, textarea {
 			}
 
 		}
+
+/* Sticky Navbar Styles */
+#navbar.sticky-navbar {
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: linear-gradient(90deg, #5e42a6 0%, #b74e91 100%);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: background 0.3s;
+}
+#navbar.sticky-navbar.sticky {
+  position: fixed;
+  background: linear-gradient(90deg, #5e42a6 0%, #b74e91 100%);
+}
+#navbar nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#navbar nav ul li {
+  margin: 0 1.5em;
+}
+#navbar nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 1em 0.5em;
+  transition: color 0.2s, border-bottom 0.2s;
+  border-bottom: 2px solid transparent;
+  letter-spacing: 0.1em;
+  font-size: 1.1em;
+}
+#navbar nav ul li a.active,
+#navbar nav ul li a:hover {
+  color: #ff6ec7;
+  border-bottom: 2px solid #ff6ec7;
+  background: none;
+}
+
+body {
+  padding-top: 60px; /* adjust if navbar height changes */
+}
